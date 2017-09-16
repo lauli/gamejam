@@ -11,6 +11,7 @@ import UIKit
 import UserNotifications
 import PermissionScope
 
+/*
 extension SettingsViewController {
     
     func askForPermission() {
@@ -46,3 +47,4 @@ extension SettingsViewController {
         return permissions
     }
 }
+ */
