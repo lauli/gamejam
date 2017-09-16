@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import Popover
 
 class AchieveCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var popoverView: UIView!
     // MARK: - Properties
     let reuseIdentifier = "achievementCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -56,19 +58,35 @@ class AchieveCollectionViewController: UIViewController, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
-        /*
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "popover")
         
-        vc.modalPresentationStyle = .popover
-        let popover = vc.popoverPresentationController!
-        popover.delegate = self
-        popover.permittedArrowDirections = .up
-        popover.sourceView = sender as? UIView
-        popover.sourceRect = sender.bounds
+        //let aView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        let labelEventname = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width / 2, height: 50))
+        labelEventname.text = "Soccer" + "15. Sept 2017"
+        labelEventname.textAlignment = .center
+        //aView.add
         
-        present(vc, animated: true, completion:nil)
- */
+        var options = [
+            .animationIn(0.3),
+            .arrowSize(CGSize.init(width: 15, height: 10))
+            ] as [PopoverOption]
+        
+        
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            if cell.frame.origin.y < CGFloat(300) {
+                options.append(.type(.down))
+            }
+            else {
+                options.append(.type(.up))
+            }
+            let popover = Popover(options: options)
+            
+            popover.show(labelEventname, fromView: cell)
+        }
+    
+        
+        
+       
+        
         
     }
  

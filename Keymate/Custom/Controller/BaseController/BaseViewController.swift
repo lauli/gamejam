@@ -67,6 +67,7 @@ class BaseViewController: UIViewController {
             navController.navigationBar.barStyle         = UIBarStyle.blackTranslucent
             navController.navigationBar.barTintColor     = UIColor.keymateOrange
             navController.navigationBar.isTranslucent    = false
+            navController.navigationBar.tintColor        = UIColor.white
         }
         self.segmentcontroller.backgroundColor =    UIColor.keymateOrange
         self.toolbar.barTintColor =                 UIColor.keymateOrange

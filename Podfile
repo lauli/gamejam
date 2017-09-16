@@ -8,5 +8,6 @@ target 'Keymate' do
 
 		pod 'MGSwipeTableCell'
 		pod 'PermissionScope'
+		pod "Popover"
 
 end
