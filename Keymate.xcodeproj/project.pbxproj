@@ -28,6 +28,10 @@
 		C88CE13E1E673F3F00C9A0A2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */; };
 		C88CE1401E6809C900C9A0A2 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */; };
 		C8C3FCD31F6D5F3800FF5FF3 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD21F6D5F3800FF5FF3 /* EventViewController.swift */; };
+		C8C3FCD51F6DB62500FF5FF3 /* EventCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */; };
+		C8C3FCD71F6DD5A700FF5FF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */; };
+		C8C3FCDA1F6DE1F900FF5FF3 /* BaseQuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD91F6DE1F900FF5FF3 /* BaseQuizController.swift */; };
+		C8C3FCDC1F6DE75200FF5FF3 /* AllQuizzController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCDB1F6DE75200FF5FF3 /* AllQuizzController.swift */; };
 		C8E45DE01E3B5CDE00EDCD79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E45DDF1E3B5CDE00EDCD79 /* AppDelegate.swift */; };
 		C8E45DE71E3B5CDE00EDCD79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E45DE51E3B5CDE00EDCD79 /* Main.storyboard */; };
 		C8E45DE91E3B5CDE00EDCD79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E45DE81E3B5CDE00EDCD79 /* Assets.xcassets */; };
@@ -61,6 +65,10 @@
 		C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileController.swift; path = Custom/Controller/ProfileController.swift; sourceTree = "<group>"; };
 		C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObject.swift; path = CoreData/ManagedObject.swift; sourceTree = "<group>"; };
 		C8C3FCD21F6D5F3800FF5FF3 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Custom/Controller/EventViewController.swift; sourceTree = "<group>"; };
+		C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCollectionViewController.swift; path = Custom/Controller/BaseController/EventCollectionViewController.swift; sourceTree = "<group>"; };
+		C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Custom/Controller/QuizViewController.swift; sourceTree = "<group>"; };
+		C8C3FCD91F6DE1F900FF5FF3 /* BaseQuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseQuizController.swift; path = Custom/Controller/QuizContainer/BaseQuizController.swift; sourceTree = "<group>"; };
+		C8C3FCDB1F6DE75200FF5FF3 /* AllQuizzController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllQuizzController.swift; path = Custom/Controller/QuizContainer/AllQuizzController.swift; sourceTree = "<group>"; };
 		C8E45DDC1E3B5CDE00EDCD79 /* Keymate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keymate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E45DDF1E3B5CDE00EDCD79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8E45DE61E3B5CDE00EDCD79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +152,15 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C8C3FCD91F6DE1F900FF5FF3 /* BaseQuizController.swift */,
+				C8C3FCDB1F6DE75200FF5FF3 /* AllQuizzController.swift */,
+			);
+			name = QuizContainer;
+			sourceTree = "<group>";
+		};
 		C8E45DD31E3B5CDE00EDCD79 = {
 			isa = PBXGroup;
 			children = (
@@ -190,14 +207,17 @@
 		C8E45DF41E3B620400EDCD79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */,
 				C803A6311F6CA3C7008C6788 /* AchievementCollectionViewController.swift */,
 				C8274F931E6A195A002DCBDD /* AddController.swift */,
 				88BC80F21E6C22B800E17EB0 /* DetailKeyViewController.swift */,
 				C80042B71E6A471B005D3514 /* FavoritViewController.swift */,
 				C8C3FCD21F6D5F3800FF5FF3 /* EventViewController.swift */,
+				C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */,
 				C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */,
 				C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */,
 				C81ED2081E65ECEE0097826F /* BaseController */,
+				C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -364,10 +384,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C80042BD1E6A4C1D005D3514 /* BaseTabBarController.swift in Sources */,
+				C8C3FCDA1F6DE1F900FF5FF3 /* BaseQuizController.swift in Sources */,
+				C8C3FCD71F6DD5A700FF5FF3 /* QuizViewController.swift in Sources */,
 				C80042C91E6C2489005D3514 /* NotificationAngel.swift in Sources */,
 				C8EC0A0A1F6D2F6C00D9C01B /* UIImageExtension.swift in Sources */,
 				C80042B81E6A471B005D3514 /* FavoritViewController.swift in Sources */,
 				C8E45DF81E3B645A00EDCD79 /* LoginViewController.swift in Sources */,
+				C8C3FCDC1F6DE75200FF5FF3 /* AllQuizzController.swift in Sources */,
 				88BC80F31E6C22B800E17EB0 /* DetailKeyViewController.swift in Sources */,
 				C8274F911E69D92D002DCBDD /* Key+CoreDataProperties.swift in Sources */,
 				C857A3941E3B863100B3CCF5 /* UIFontExtension.swift in Sources */,
@@ -378,6 +401,7 @@
 				C80042D01E6C4AEB005D3514 /* ViewControllerExtension.swift in Sources */,
 				C8E45DE01E3B5CDE00EDCD79 /* AppDelegate.swift in Sources */,
 				C88CE13C1E673BDA00C9A0A2 /* CoreDataManager.swift in Sources */,
+				C8C3FCD51F6DB62500FF5FF3 /* EventCollectionViewController.swift in Sources */,
 				C8E45DFC1E3B75DF00EDCD79 /* UIColorExtension.swift in Sources */,
 				C88CE13E1E673F3F00C9A0A2 /* ProfileController.swift in Sources */,
 				C80042CA1E6C2489005D3514 /* NotificationDevil.swift in Sources */,

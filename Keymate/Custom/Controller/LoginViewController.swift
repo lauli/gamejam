@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.backgroundColor = UIColor.keymateOrange.cgColor
-        //self.passwordfield.becomeFirstResponder()
+        self.setup()
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,6 +108,18 @@ class LoginViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = storyboard.instantiateViewController(withIdentifier: "eventTableView") as! UINavigationController
         self.present(navigationController, animated: true)
+    }
+    
+    // MARK: Setup Elements
+    private func setup() {
+        self.navigationItem.title = "EVENTS"
+        if let navController: UINavigationController = self.navigationController {
+            navController.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont.keymateHelveticaCondensedBold(fontSize: 20) ]
+            navController.navigationBar.barStyle         = UIBarStyle.blackTranslucent
+            navController.navigationBar.barTintColor     = UIColor.keymateOrange
+            navController.navigationBar.isTranslucent    = false
+            navController.navigationBar.tintColor        = UIColor.white
+        }
     }
     
 }
