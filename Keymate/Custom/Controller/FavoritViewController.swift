@@ -66,16 +66,16 @@ class FavoritViewController: BaseTableViewController, NSFetchedResultsController
         catLabel.text = key.category
         
         if key.category == "Login" {
-            imageView.image = UIImage(named: "loginImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Bankaccount" {
-            imageView.image = UIImage(named: "bankImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Personal" {
-            imageView.image = UIImage(named: "personalImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Other" {
-            imageView.image = UIImage(named: "othersImage")
+            imageView.image = UIImage(named: "medal")
         }
         imageView.layer.cornerRadius = 30
         imageView.clipsToBounds = true

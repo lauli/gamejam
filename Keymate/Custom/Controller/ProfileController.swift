@@ -10,15 +10,65 @@ import Foundation
 import UIKit
 import CoreData
 
-class OverviewController: BaseTableViewController, NSFetchedResultsControllerDelegate {
+class ProfileController: BaseTableViewController, NSFetchedResultsControllerDelegate {
 
     let cdManager: CoreDataManager = CoreDataManager.sharedInstance
     var keys: [Key] = []
     var sorted: [Key] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var profileBackground: UIImageView!
+    @IBOutlet weak var profileBackgroundLayer: UIView!
+    @IBOutlet weak var profileName: UILabel!
+    @IBOutlet weak var profileUsername: UILabel!
+    @IBOutlet weak var profileHighscore: UILabel!
+    @IBOutlet weak var profileHighscoreLabel: UILabel!
+    @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var task: UILabel!
+    @IBOutlet weak var games: UILabel!
+    @IBOutlet weak var events: UILabel!
+    @IBOutlet weak var achievements: UILabel!
+    var context = CIContext(options: nil)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let image = UIImage(named: "profile") {
+            self.profilePicture.image =     image
+            self.profileBackground.image =  image
+        }
+        self.profileHighscore.layer.zPosition =         3
+        self.profileHighscoreLabel.layer.zPosition =    3
+        self.profilePicture.layer.zPosition =           2
+        self.profileBackgroundLayer.layer.zPosition =   1
+        self.profileHighscore.textColor = UIColor.keymateOrange
+        self.blurEffect(for: self.profileBackground)
+        self.changeToCircle(view: self.profilePicture)
+    }
+    
+    private func changeToCircle(view: UIImageView) {
+        view.layer.cornerRadius = view.frame.size.width / 2
+        view.clipsToBounds = true
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    private func blurEffect(for image: UIImageView) {
         
+        let currentFilter = CIFilter(name: "CIGaussianBlur")
+        let beginImage = CIImage(image: image.image!)
+        currentFilter!.setValue(beginImage, forKey: kCIInputImageKey)
+        currentFilter!.setValue(5, forKey: kCIInputRadiusKey)
+        
+        let cropFilter = CIFilter(name: "CICrop")
+        cropFilter!.setValue(currentFilter!.outputImage, forKey: kCIInputImageKey)
+        cropFilter!.setValue(CIVector(cgRect: beginImage!.extent), forKey: "inputRectangle")
+        
+        let output = cropFilter!.outputImage
+        let cgimg = context.createCGImage(output!, from: output!.extent)
+        let processedImage = UIImage(cgImage: cgimg!)
+        self.profileBackground.image = processedImage
+    }
+    
+        /*
         self.tableView.delegate   = self
         self.tableView.dataSource = self
         
@@ -29,6 +79,7 @@ class OverviewController: BaseTableViewController, NSFetchedResultsControllerDel
             object: nil
         )
         self.updateViewData()
+ 
     }
     
     deinit {
@@ -67,16 +118,16 @@ class OverviewController: BaseTableViewController, NSFetchedResultsControllerDel
         catLabel.text = key.category
         
         if key.category == "Login" {
-            imageView.image = UIImage(named: "loginImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Bankaccount" {
-            imageView.image = UIImage(named: "bankImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Personal" {
-            imageView.image = UIImage(named: "personalImage")
+            imageView.image = UIImage(named: "medal")
         }
         if key.category == "Other" {
-            imageView.image = UIImage(named: "othersImage")
+            imageView.image = UIImage(named: "medal")
         }
         imageView.layer.cornerRadius = 30
         imageView.clipsToBounds = true
@@ -173,4 +224,6 @@ class OverviewController: BaseTableViewController, NSFetchedResultsControllerDel
             }
         }
     }
+ 
+ */
 }

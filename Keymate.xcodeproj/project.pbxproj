@@ -26,7 +26,7 @@
 		C857A3941E3B863100B3CCF5 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857A3931E3B863100B3CCF5 /* UIFontExtension.swift */; };
 		C857A39A1E3BFCCD00B3CCF5 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C857A3981E3BFCCD00B3CCF5 /* CoreData.xcdatamodeld */; };
 		C88CE13C1E673BDA00C9A0A2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13B1E673BDA00C9A0A2 /* CoreDataManager.swift */; };
-		C88CE13E1E673F3F00C9A0A2 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13D1E673F3F00C9A0A2 /* OverviewController.swift */; };
+		C88CE13E1E673F3F00C9A0A2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */; };
 		C88CE1401E6809C900C9A0A2 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */; };
 		C8E45DE01E3B5CDE00EDCD79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E45DDF1E3B5CDE00EDCD79 /* AppDelegate.swift */; };
 		C8E45DE71E3B5CDE00EDCD79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E45DE51E3B5CDE00EDCD79 /* Main.storyboard */; };
@@ -34,6 +34,8 @@
 		C8E45DEC1E3B5CDE00EDCD79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E45DEA1E3B5CDE00EDCD79 /* LaunchScreen.storyboard */; };
 		C8E45DF81E3B645A00EDCD79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */; };
 		C8E45DFC1E3B75DF00EDCD79 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E45DFB1E3B75DF00EDCD79 /* UIColorExtension.swift */; };
+		C8EC0A0A1F6D2F6C00D9C01B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC0A091F6D2F6C00D9C01B /* UIImageExtension.swift */; };
+		C8EC0A0C1F6D446B00D9C01B /* varsity_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8EC0A0B1F6D446B00D9C01B /* varsity_regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +59,7 @@
 		C857A3931E3B863100B3CCF5 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFontExtension.swift; path = Extension/UIFontExtension.swift; sourceTree = "<group>"; };
 		C857A3991E3BFCCD00B3CCF5 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		C88CE13B1E673BDA00C9A0A2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = CoreData/CoreDataManager.swift; sourceTree = "<group>"; };
-		C88CE13D1E673F3F00C9A0A2 /* OverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewController.swift; path = Custom/Controller/OverviewController.swift; sourceTree = "<group>"; };
+		C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileController.swift; path = Custom/Controller/ProfileController.swift; sourceTree = "<group>"; };
 		C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObject.swift; path = CoreData/ManagedObject.swift; sourceTree = "<group>"; };
 		C8E45DDC1E3B5CDE00EDCD79 /* Keymate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keymate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E45DDF1E3B5CDE00EDCD79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		C8E45DED1E3B5CDE00EDCD79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Custom/Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		C8E45DFB1E3B75DF00EDCD79 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Extension/UIColorExtension.swift; sourceTree = "<group>"; };
+		C8EC0A091F6D2F6C00D9C01B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		C8EC0A0B1F6D446B00D9C01B /* varsity_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = varsity_regular.ttf; sourceTree = "<group>"; };
 		FF7A6455BF22733390053C41 /* Pods-Keymate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keymate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Keymate/Pods-Keymate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,7 @@
 		C8E45DDE1E3B5CDE00EDCD79 /* Keymate */ = {
 			isa = PBXGroup;
 			children = (
+				C8EC0A0B1F6D446B00D9C01B /* varsity_regular.ttf */,
 				C857A3971E3BFBD500B3CCF5 /* CoreData */,
 				C8E45DF31E3B61F300EDCD79 /* Custom */,
 				C8E45DFA1E3B75B200EDCD79 /* Extension */,
@@ -189,7 +194,7 @@
 				C81ED2081E65ECEE0097826F /* BaseController */,
 				C80042B71E6A471B005D3514 /* FavoritViewController.swift */,
 				C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */,
-				C88CE13D1E673F3F00C9A0A2 /* OverviewController.swift */,
+				C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */,
 				C80042C41E6C1F0E005D3514 /* SettingsViewController.swift */,
 				88BC80F21E6C22B800E17EB0 /* DetailKeyViewController.swift */,
 				C803A6311F6CA3C7008C6788 /* AchievementCollectionViewController.swift */,
@@ -204,6 +209,7 @@
 				C857A3931E3B863100B3CCF5 /* UIFontExtension.swift */,
 				C80042CD1E6C2994005D3514 /* NSDate.swift */,
 				C80042CF1E6C4AEB005D3514 /* ViewControllerExtension.swift */,
+				C8EC0A091F6D2F6C00D9C01B /* UIImageExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 			files = (
 				C8E45DEC1E3B5CDE00EDCD79 /* LaunchScreen.storyboard in Resources */,
 				C8E45DE91E3B5CDE00EDCD79 /* Assets.xcassets in Resources */,
+				C8EC0A0C1F6D446B00D9C01B /* varsity_regular.ttf in Resources */,
 				C8E45DE71E3B5CDE00EDCD79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 			files = (
 				C80042BD1E6A4C1D005D3514 /* BaseTabBarController.swift in Sources */,
 				C80042C91E6C2489005D3514 /* NotificationAngel.swift in Sources */,
+				C8EC0A0A1F6D2F6C00D9C01B /* UIImageExtension.swift in Sources */,
 				C80042B81E6A471B005D3514 /* FavoritViewController.swift in Sources */,
 				C8E45DF81E3B645A00EDCD79 /* LoginViewController.swift in Sources */,
 				88BC80F31E6C22B800E17EB0 /* DetailKeyViewController.swift in Sources */,
@@ -369,7 +377,7 @@
 				C8E45DE01E3B5CDE00EDCD79 /* AppDelegate.swift in Sources */,
 				C88CE13C1E673BDA00C9A0A2 /* CoreDataManager.swift in Sources */,
 				C8E45DFC1E3B75DF00EDCD79 /* UIColorExtension.swift in Sources */,
-				C88CE13E1E673F3F00C9A0A2 /* OverviewController.swift in Sources */,
+				C88CE13E1E673F3F00C9A0A2 /* ProfileController.swift in Sources */,
 				C80042CA1E6C2489005D3514 /* NotificationDevil.swift in Sources */,
 				C80042CE1E6C2994005D3514 /* NSDate.swift in Sources */,
 				C80042BE1E6A4C1D005D3514 /* BaseTableViewController.swift in Sources */,

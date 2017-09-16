@@ -11,12 +11,15 @@ import UIKit
 class BaseViewController: UIViewController {
 
     @IBOutlet weak var containerProfile: UIView!
-    @IBOutlet weak var containerAchievement: UIView!
+    @IBOutlet weak var containerAchievements: UIView!
     @IBOutlet weak var containerAttendance: UIView!
+    @IBOutlet weak var segmentcontroller: UISegmentedControl!
+    @IBOutlet weak var toolbar: UIToolbar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hide(profile: true, achievement: true, attendance: true)
+        self.hide(profile: false, achievement: true, attendance: true)
         self.setup()
     }
 
@@ -28,11 +31,12 @@ class BaseViewController: UIViewController {
     // MARK: Custom Methods
     private func hide(profile: Bool, achievement: Bool, attendance: Bool) {
         self.containerProfile.isHidden = profile
-        self.containerAchievement.isHidden  = achievement
-        self.containerAchievement.isHidden  = attendance
+        self.containerAchievements.isHidden  = achievement
+        self.containerAttendance.isHidden  = attendance
     }
 
-    @IBAction func switchedtab(_ sender: UISegmentedControl) {
+    @IBAction func switchedTabTo(_ sender: UISegmentedControl) {
+        
         switch sender.selectedSegmentIndex {
         case 0:
             // Profile
@@ -51,8 +55,9 @@ class BaseViewController: UIViewController {
             break
             
         }
+        
     }
-    
+   
     
     // MARK: Setup Elements
     private func setup() {
@@ -63,5 +68,7 @@ class BaseViewController: UIViewController {
             navController.navigationBar.barTintColor     = UIColor.keymateOrange
             navController.navigationBar.isTranslucent    = false
         }
+        self.segmentcontroller.backgroundColor =    UIColor.keymateOrange
+        self.toolbar.barTintColor =                 UIColor.keymateOrange
     }
 }
