@@ -29,6 +29,9 @@
 		C88CE1401E6809C900C9A0A2 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */; };
 		C8A511151F6E02A600767019 /* launchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A511141F6E02A600767019 /* launchscreen.png */; };
 		C8A511171F6E0E1300767019 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A511161F6E0E1300767019 /* EventTableViewController.swift */; };
+		C8A511191F6E22FC00767019 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A511181F6E22FC00767019 /* TasksViewController.swift */; };
+		C8A5111C1F6E265A00767019 /* SponsorTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A5111B1F6E265A00767019 /* SponsorTaskController.swift */; };
+		C8A5111E1F6E26A200767019 /* BaseTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A5111D1F6E26A200767019 /* BaseTaskController.swift */; };
 		C8C3FCD31F6D5F3800FF5FF3 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD21F6D5F3800FF5FF3 /* EventViewController.swift */; };
 		C8C3FCD51F6DB62500FF5FF3 /* EventCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */; };
 		C8C3FCD71F6DD5A700FF5FF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */; };
@@ -68,6 +71,9 @@
 		C88CE13F1E6809C900C9A0A2 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObject.swift; path = CoreData/ManagedObject.swift; sourceTree = "<group>"; };
 		C8A511141F6E02A600767019 /* launchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchscreen.png; path = Icons/launchscreen.png; sourceTree = SOURCE_ROOT; };
 		C8A511161F6E0E1300767019 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewController.swift; path = Custom/Controller/EventTableViewController.swift; sourceTree = "<group>"; };
+		C8A511181F6E22FC00767019 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = Custom/Controller/TasksViewController.swift; sourceTree = "<group>"; };
+		C8A5111B1F6E265A00767019 /* SponsorTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SponsorTaskController.swift; path = Custom/Controller/TasksContainer/SponsorTaskController.swift; sourceTree = "<group>"; };
+		C8A5111D1F6E26A200767019 /* BaseTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTaskController.swift; path = Custom/Controller/TasksContainer/BaseTaskController.swift; sourceTree = "<group>"; };
 		C8C3FCD21F6D5F3800FF5FF3 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventViewController.swift; path = Custom/Controller/EventViewController.swift; sourceTree = "<group>"; };
 		C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCollectionViewController.swift; path = Custom/Controller/BaseController/EventCollectionViewController.swift; sourceTree = "<group>"; };
 		C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = Custom/Controller/QuizViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +162,15 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		C8A5111A1F6E261800767019 /* TasksContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5111B1F6E265A00767019 /* SponsorTaskController.swift */,
+				C8A5111D1F6E26A200767019 /* BaseTaskController.swift */,
+			);
+			name = TasksContainer;
+			sourceTree = "<group>";
+		};
 		C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +227,7 @@
 		C8E45DF41E3B620400EDCD79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */,
+				C8A5111A1F6E261800767019 /* TasksContainer */,
 				C803A6311F6CA3C7008C6788 /* AchievementCollectionViewController.swift */,
 				C8274F931E6A195A002DCBDD /* AddController.swift */,
 				88BC80F21E6C22B800E17EB0 /* DetailKeyViewController.swift */,
@@ -222,8 +237,10 @@
 				C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */,
 				C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */,
 				C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */,
-				C81ED2081E65ECEE0097826F /* BaseController */,
+				C8A511181F6E22FC00767019 /* TasksViewController.swift */,
 				C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */,
+				C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */,
+				C81ED2081E65ECEE0097826F /* BaseController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -407,12 +424,15 @@
 				C803A6321F6CA3C7008C6788 /* AchievementCollectionViewController.swift in Sources */,
 				C80042D01E6C4AEB005D3514 /* ViewControllerExtension.swift in Sources */,
 				C8E45DE01E3B5CDE00EDCD79 /* AppDelegate.swift in Sources */,
+				C8A5111C1F6E265A00767019 /* SponsorTaskController.swift in Sources */,
 				C88CE13C1E673BDA00C9A0A2 /* CoreDataManager.swift in Sources */,
 				C8A511171F6E0E1300767019 /* EventTableViewController.swift in Sources */,
+				C8A5111E1F6E26A200767019 /* BaseTaskController.swift in Sources */,
 				C8C3FCD51F6DB62500FF5FF3 /* EventCollectionViewController.swift in Sources */,
 				C8E45DFC1E3B75DF00EDCD79 /* UIColorExtension.swift in Sources */,
 				C88CE13E1E673F3F00C9A0A2 /* ProfileController.swift in Sources */,
 				C80042CA1E6C2489005D3514 /* NotificationDevil.swift in Sources */,
+				C8A511191F6E22FC00767019 /* TasksViewController.swift in Sources */,
 				C80042CE1E6C2994005D3514 /* NSDate.swift in Sources */,
 				C80042BE1E6A4C1D005D3514 /* BaseTableViewController.swift in Sources */,
 				C80042C01E6A4D4A005D3514 /* BaseViewController.swift in Sources */,
