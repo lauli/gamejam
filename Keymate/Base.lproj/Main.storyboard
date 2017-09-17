@@ -115,7 +115,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58.922" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W8-rq-PoV">
-                                                    <rect key="frame" x="77" y="182.5" width="220" height="41"/>
+                                                    <rect key="frame" x="77.5" y="182.5" width="220" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="220" id="8C2-8s-kOe"/>
                                                         <constraint firstAttribute="height" constant="41" id="TbK-1c-JJJ"/>
@@ -126,13 +126,13 @@
                                                     <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-pb-uC8">
-                                                    <rect key="frame" x="127" y="219" width="120" height="11"/>
+                                                    <rect key="frame" x="127.5" y="219" width="120" height="11"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bG2-ku-JTw">
-                                                    <rect key="frame" x="127" y="77" width="120" height="120"/>
+                                                    <rect key="frame" x="127.5" y="77" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="120" id="bqu-sw-9Gc"/>
                                                         <constraint firstAttribute="width" constant="120" id="ora-Um-6OV"/>
@@ -144,7 +144,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Izl-VP-dLk" userLabel="BackgroundPicture">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="253"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Mustermann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRE-tj-ny0">
                                                     <rect key="frame" x="28" y="282" width="232.5" height="21"/>
@@ -296,7 +296,6 @@
         <!--Event View Controller-->
         <scene sceneID="dAJ-t2-SdY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tOx-gj-Xda" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="oBz-kc-38T" customClass="EventViewController" customModule="Keymate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="63M-b1-lHz"/>
@@ -319,6 +318,7 @@
                         <outlet property="webview" destination="Xiu-WU-hVm" id="dO6-tC-Lnm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOx-gj-Xda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3332" y="1672"/>
         </scene>
@@ -393,6 +393,7 @@
                                     <constraint firstAttribute="width" constant="200" id="rTp-Lt-tp4"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="pressedEnter:" destination="dWa-Hb-VIA" eventType="primaryActionTriggered" id="0Iq-gy-Nyw"/>
@@ -547,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="3049" y="-1434"/>
         </scene>
-        <!--Base Table View Controller-->
+        <!--Event Table View Controller-->
         <scene sceneID="bZ9-7t-7po">
             <objects>
-                <tableViewController id="Y9r-ge-ymS" customClass="BaseTableViewController" customModule="Keymate" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Y9r-ge-ymS" customClass="EventTableViewController" customModule="Keymate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="o" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Pj-yl-idL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,7 +582,7 @@
                                                         <constraint firstAttribute="height" constant="60" id="btw-mk-FGv"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="quizCell" text="0/5 Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-OU-Biu">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="quizCell" text="0/10 Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-OU-Biu">
                                                     <rect key="frame" x="87" y="44" width="275" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="hzj-sx-YmK"/>
@@ -699,6 +700,51 @@
                                             <segue destination="oBz-kc-38T" kind="show" id="Bjz-Ut-Xz6"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="surveyCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritCell" rowHeight="80" id="eEf-lr-glv" userLabel="surveyCell">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eEf-lr-glv" id="PCt-be-n2I">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SURVEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-Oq-Wd7">
+                                                    <rect key="frame" x="87" y="15" width="275" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="rDd-ya-mR8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Varsity" family="Varsity" pointSize="28"/>
+                                                    <color key="textColor" red="0.94494295120000005" green="0.61238664389999997" blue="0.24310453239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-gZ-oml">
+                                                    <rect key="frame" x="8" y="10" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="VXo-Ft-Yyg"/>
+                                                        <constraint firstAttribute="width" constant="60" id="bsK-U8-GnJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arena Gjøvik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkj-cN-ch1">
+                                                    <rect key="frame" x="87" y="44" width="275" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="jmD-Ke-lij"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xxg-Oq-Wd7" secondAttribute="trailing" constant="5" id="DeJ-uZ-dbd"/>
+                                                <constraint firstItem="xxg-Oq-Wd7" firstAttribute="leading" secondItem="C4x-gZ-oml" secondAttribute="trailing" constant="19" id="IH8-lt-66j"/>
+                                                <constraint firstItem="C4x-gZ-oml" firstAttribute="centerY" secondItem="PCt-be-n2I" secondAttribute="centerY" id="QoN-5q-9fP"/>
+                                                <constraint firstItem="xxg-Oq-Wd7" firstAttribute="top" secondItem="PCt-be-n2I" secondAttribute="topMargin" constant="7" id="X4l-7B-yFq"/>
+                                                <constraint firstItem="Dkj-cN-ch1" firstAttribute="leading" secondItem="xxg-Oq-Wd7" secondAttribute="leading" id="cQJ-FI-jpQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Dkj-cN-ch1" secondAttribute="trailing" constant="5" id="lHV-VW-GHL"/>
+                                                <constraint firstItem="C4x-gZ-oml" firstAttribute="leading" secondItem="PCt-be-n2I" secondAttribute="leadingMargin" id="t5B-N7-wIV"/>
+                                                <constraint firstItem="Dkj-cN-ch1" firstAttribute="top" secondItem="xxg-Oq-Wd7" secondAttribute="bottom" constant="8" id="zBD-Ml-lcB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -708,6 +754,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="P7H-Iw-ndA"/>
+                    <connections>
+                        <outlet property="imageGame" destination="LWP-p6-S1G" id="OgN-fM-ALF"/>
+                        <outlet property="imageQuiz" destination="2QS-4U-fyU" id="KGE-gY-Chi"/>
+                        <outlet property="imageSurvey" destination="C4x-gZ-oml" id="Gch-X9-ssV"/>
+                        <outlet property="imageTask" destination="Efk-FJ-P0h" id="pyJ-H6-dOf"/>
+                        <outlet property="resultQuiz" destination="Aio-OU-Biu" id="AvS-j3-kwa"/>
+                        <outlet property="resultTasks" destination="1Rk-Bk-UjI" id="joX-6J-2xA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaR-3l-Jvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -716,7 +770,6 @@
         <!--Event Collection View Controller-->
         <scene sceneID="3OV-My-KCA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Px6-sJ-hlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lFE-1a-sUt" customClass="EventCollectionViewController" customModule="Keymate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P9k-nR-ymk"/>
@@ -785,6 +838,7 @@
                         <outlet property="collectionview" destination="G8F-US-xRx" id="QHN-tv-w0x"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Px6-sJ-hlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3049" y="-733"/>
         </scene>
@@ -934,7 +988,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="gameCell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="kvz-nD-nK2" userLabel="minigameCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="kvz-nD-nK2" userLabel="minigameCell">
                                         <rect key="frame" x="0.0" y="240" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kvz-nD-nK2" id="jBl-Ym-IgZ">
@@ -1002,7 +1056,7 @@
                                                         <constraint firstAttribute="width" constant="60" id="K8n-du-QYw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="quizCell" text="91.338" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiY-MB-X5D">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="91.338" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiY-MB-X5D">
                                                     <rect key="frame" x="87" y="44" width="275" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Eds-fL-EFs"/>
@@ -1024,7 +1078,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="taskCell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="P4q-q6-K8T" userLabel="tasksCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="P4q-q6-K8T" userLabel="tasksCell">
                                         <rect key="frame" x="0.0" y="400" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P4q-q6-K8T" id="CHr-qY-P68">
@@ -1069,7 +1123,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="gameCell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="00f-tA-LeF" userLabel="minigameCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="00f-tA-LeF" userLabel="minigameCell">
                                         <rect key="frame" x="0.0" y="480" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00f-tA-LeF" id="GlY-Xz-U6f">
@@ -1114,7 +1168,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="gameCell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="VlS-Zj-9hN" userLabel="minigameCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="VlS-Zj-9hN" userLabel="minigameCell">
                                         <rect key="frame" x="0.0" y="560" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VlS-Zj-9hN" id="8FB-dP-Z5G">
@@ -1418,7 +1472,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In which year Norway was the host of European Handball Championship?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY6-qu-h9W">
-                                <rect key="frame" x="20" y="89.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="100" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1685,7 +1739,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is maximum number of players of an ice hockey team?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF6-XK-X9F">
-                                <rect key="frame" x="20" y="88.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="99" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1774,7 +1828,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the club colors of football club Rosenborg BK Trondheim?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Na-cL-2GF">
-                                <rect key="frame" x="20" y="88.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="99" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1954,7 +2008,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the place of first documented skiing competition in history?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rD-SG-Edd">
-                                <rect key="frame" x="20" y="88.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="99" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2043,7 +2097,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who is the only Norwegian who has ever played in the NBA league?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJh-2P-h8v">
-                                <rect key="frame" x="20" y="88.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="99" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2132,7 +2186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which city is the host of upcoming Cycling Road World Championships?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-dc-VQ6">
-                                <rect key="frame" x="20" y="88.5" width="335" height="41"/>
+                                <rect key="frame" x="20" y="99" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

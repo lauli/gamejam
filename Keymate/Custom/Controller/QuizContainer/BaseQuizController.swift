@@ -17,45 +17,55 @@ class BaseQuizController: UIViewController{
     @IBOutlet weak var buttonD: UIButton!
     
     var correctAnswer: String = ""
-    
+    var currentQuestion: Int  = -1
+    let userDefault           = UserDefaults.standard
     
     override func viewDidLoad() {
         self.setup()
     }
     
     @IBAction func clickedButtonA(_ sender: Any) {
+        
         if self.correctAnswer == "A" {
             self.buttonA.layer.backgroundColor = UIColor.green.cgColor
+            self.saveAnswer(withIdentifier: 1)
         }
         else {
             self.wrongAnswer()
+            self.saveAnswer(withIdentifier: 0)
         }
     }
     
     @IBAction func clickedButtonB(_ sender: Any) {
         if self.correctAnswer == "B" {
             self.buttonB.layer.backgroundColor = UIColor.green.cgColor
+            self.saveAnswer(withIdentifier: 1)
         }
         else {
             self.wrongAnswer()
+            self.saveAnswer(withIdentifier: 0)
         }
     }
     
     @IBAction func clickedButtonC(_ sender: Any) {
         if self.correctAnswer == "C" {
             self.buttonC.layer.backgroundColor = UIColor.green.cgColor
+            self.saveAnswer(withIdentifier: 1)
         }
         else {
             self.wrongAnswer()
+            self.saveAnswer(withIdentifier: 0)
         }
     }
     
     @IBAction func clickedButtonD(_ sender: Any) {
         if self.correctAnswer == "D" {
             self.buttonD.layer.backgroundColor = UIColor.green.cgColor
+            self.saveAnswer(withIdentifier: 1)
         }
         else {
             self.wrongAnswer()
+            self.saveAnswer(withIdentifier: 0)
         }
     }
     
@@ -115,6 +125,31 @@ extension BaseQuizController {
         }
     }
     
+    func checkIfAlreadyAnswered()/* -> Bool */{
+        if self.userDefault.value(forKey: "quiz-points-for-\(self.currentQuestion)") == nil {
+            //return false
+        } else {
+            self.alreadyAnswered()
+            //return true
+        }
+    }
     
+    func alreadyAnswered() {
+        self.wrongAnswer()
+        self.disableButtons()
+    }
+    
+    func saveAnswer(withIdentifier identifier: Int) {
+        // 0 -> wrong
+        // 1 -> right
+        self.userDefault.set(identifier, forKey: "quiz-points-for-\(self.currentQuestion)")
+    }
+    
+    func disableButtons() {
+        self.buttonA.isUserInteractionEnabled = false
+        self.buttonB.isUserInteractionEnabled = false
+        self.buttonC.isUserInteractionEnabled = false
+        self.buttonD.isUserInteractionEnabled = false
+    }
     
 }

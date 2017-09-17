@@ -20,8 +20,11 @@ class FirstQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "B"
+        self.correctAnswer      = "B"
+        self.currentQuestion    = 1
+        self.checkIfAlreadyAnswered()
     }
+    
 }
 
 class SecondQuiz: BaseQuizController {
@@ -35,7 +38,9 @@ class SecondQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "C"
+        self.correctAnswer      = "C"
+        self.currentQuestion    = 2
+        self.checkIfAlreadyAnswered()
     }
 }
 
@@ -50,7 +55,9 @@ class ThirdQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "A"
+        self.correctAnswer      = "A"
+        self.currentQuestion    = 3
+        self.checkIfAlreadyAnswered()
     }
 }
 
@@ -65,7 +72,9 @@ class FourthQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "C"
+        self.correctAnswer      = "C"
+        self.currentQuestion    = 4
+        self.checkIfAlreadyAnswered()
     }
 }
 
@@ -80,7 +89,9 @@ class FifthQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "B"
+        self.correctAnswer      = "B"
+        self.currentQuestion    = 5
+        self.checkIfAlreadyAnswered()
     }
 }
 
@@ -95,8 +106,12 @@ class SixthQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "A"
+        self.correctAnswer      = "A"
+        self.currentQuestion    = 6
+        self.checkIfAlreadyAnswered()
     }
+    
+    
 }
 
 class SeventhQuiz: BaseQuizController {
@@ -110,8 +125,11 @@ class SeventhQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "D"
+        self.correctAnswer      = "D"
+        self.currentQuestion    = 7
+        self.checkIfAlreadyAnswered()
     }
+    
 }
 
 class EighthQuiz: BaseQuizController {
@@ -126,7 +144,9 @@ class EighthQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "C"
+        self.correctAnswer      = "C"
+        self.currentQuestion    = 8
+        self.checkIfAlreadyAnswered()
     }
 }
 
@@ -142,6 +162,9 @@ class NinethQuiz: BaseQuizController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.correctAnswer = "D"
+        self.currentQuestion    = 9
+        self.checkIfAlreadyAnswered()
+
     }
 }
 
@@ -156,6 +179,8 @@ class TenthQuiz: BaseQuizController {
      */
     
     override func viewWillAppear(_ animated: Bool) {
-        self.correctAnswer = "A"
+        self.correctAnswer      = "A"
+        self.currentQuestion    = 10
+        self.checkIfAlreadyAnswered()
     }
 }
