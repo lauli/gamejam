@@ -45,6 +45,7 @@ class EventTableViewController: BaseTableViewController {
 extension EventTableViewController {
     func quizIsFinished() -> Bool {
         var correctAnswers = 0
+        var wrongAnswers = 0
         var allFinished   = true
         for index in 1..<11 {
             if self.userDefault.value(forKey: "quiz-points-for-\(index)") == nil {
@@ -53,6 +54,9 @@ extension EventTableViewController {
             else if self.userDefault.value(forKey: "quiz-points-for-\(index)") as! Int == 1 {
                 correctAnswers += 1
             }
+            else {
+                wrongAnswers += 1
+            }
         }
         
         if allFinished {
@@ -60,7 +64,7 @@ extension EventTableViewController {
             self.resultQuiz.text = "\(correctAnswers)/10 correct"
         }
         else {
-            self.resultQuiz.text = "\(correctAnswers)/10 finished"
+            self.resultQuiz.text = "\(correctAnswers+wrongAnswers)/10 finished"
         }
         return allFinished
     }

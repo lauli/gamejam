@@ -30,7 +30,7 @@ class ProfileController: BaseTableViewController, NSFetchedResultsControllerDele
     @IBOutlet weak var achievements: UILabel!
     var context = CIContext(options: nil)
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
         if let image = UIImage(named: "profile") {
             self.profilePicture.image =     image
             self.profileBackground.image =  image
