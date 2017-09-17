@@ -22,6 +22,9 @@
 		C8274F901E69D92D002DCBDD /* Key+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8274F8E1E69D92D002DCBDD /* Key+CoreDataClass.swift */; };
 		C8274F911E69D92D002DCBDD /* Key+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8274F8F1E69D92D002DCBDD /* Key+CoreDataProperties.swift */; };
 		C8274F941E6A195A002DCBDD /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8274F931E6A195A002DCBDD /* AddController.swift */; };
+		C856AFCE1F6E87AE005C7A9B /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856AFCD1F6E87AE005C7A9B /* SurveyViewController.swift */; };
+		C856AFD21F6E88A1005C7A9B /* AllSurveyControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856AFD11F6E88A1005C7A9B /* AllSurveyControllers.swift */; };
+		C856AFD41F6E89B3005C7A9B /* BaseSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856AFD31F6E89B3005C7A9B /* BaseSurveyController.swift */; };
 		C857A3941E3B863100B3CCF5 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857A3931E3B863100B3CCF5 /* UIFontExtension.swift */; };
 		C857A39A1E3BFCCD00B3CCF5 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C857A3981E3BFCCD00B3CCF5 /* CoreData.xcdatamodeld */; };
 		C88CE13C1E673BDA00C9A0A2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88CE13B1E673BDA00C9A0A2 /* CoreDataManager.swift */; };
@@ -64,6 +67,9 @@
 		C8274F8E1E69D92D002DCBDD /* Key+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Key+CoreDataClass.swift"; path = "CoreData/Key/Key+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8274F8F1E69D92D002DCBDD /* Key+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Key+CoreDataProperties.swift"; path = "CoreData/Key/Key+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8274F931E6A195A002DCBDD /* AddController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddController.swift; path = Custom/Controller/AddController.swift; sourceTree = "<group>"; };
+		C856AFCD1F6E87AE005C7A9B /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyViewController.swift; path = Custom/Controller/SurveyViewController.swift; sourceTree = "<group>"; };
+		C856AFD11F6E88A1005C7A9B /* AllSurveyControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllSurveyControllers.swift; path = Custom/Controller/SurveyContainer/AllSurveyControllers.swift; sourceTree = "<group>"; };
+		C856AFD31F6E89B3005C7A9B /* BaseSurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseSurveyController.swift; path = Custom/Controller/SurveyContainer/BaseSurveyController.swift; sourceTree = "<group>"; };
 		C857A3931E3B863100B3CCF5 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFontExtension.swift; path = Extension/UIFontExtension.swift; sourceTree = "<group>"; };
 		C857A3991E3BFCCD00B3CCF5 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		C88CE13B1E673BDA00C9A0A2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = CoreData/CoreDataManager.swift; sourceTree = "<group>"; };
@@ -151,6 +157,16 @@
 			name = Key;
 			sourceTree = "<group>";
 		};
+		C856AFCA1F6E8751005C7A9B /* SurveyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C856AFCD1F6E87AE005C7A9B /* SurveyViewController.swift */,
+				C856AFD11F6E88A1005C7A9B /* AllSurveyControllers.swift */,
+				C856AFD31F6E89B3005C7A9B /* BaseSurveyController.swift */,
+			);
+			name = SurveyContainer;
+			sourceTree = "<group>";
+		};
 		C857A3971E3BFBD500B3CCF5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +181,7 @@
 		C8A5111A1F6E261800767019 /* TasksContainer */ = {
 			isa = PBXGroup;
 			children = (
+				C8A511181F6E22FC00767019 /* TasksViewController.swift */,
 				C8A5111B1F6E265A00767019 /* SponsorTaskController.swift */,
 				C8A5111D1F6E26A200767019 /* BaseTaskController.swift */,
 			);
@@ -174,6 +191,7 @@
 		C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */ = {
 			isa = PBXGroup;
 			children = (
+				C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */,
 				C8C3FCD91F6DE1F900FF5FF3 /* BaseQuizController.swift */,
 				C8C3FCDB1F6DE75200FF5FF3 /* AllQuizzController.swift */,
 			);
@@ -227,7 +245,7 @@
 		C8E45DF41E3B620400EDCD79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C8A5111A1F6E261800767019 /* TasksContainer */,
+				C81ED2081E65ECEE0097826F /* BaseController */,
 				C803A6311F6CA3C7008C6788 /* AchievementCollectionViewController.swift */,
 				C8274F931E6A195A002DCBDD /* AddController.swift */,
 				88BC80F21E6C22B800E17EB0 /* DetailKeyViewController.swift */,
@@ -237,10 +255,9 @@
 				C8C3FCD41F6DB62500FF5FF3 /* EventCollectionViewController.swift */,
 				C8E45DF71E3B645A00EDCD79 /* LoginViewController.swift */,
 				C88CE13D1E673F3F00C9A0A2 /* ProfileController.swift */,
-				C8A511181F6E22FC00767019 /* TasksViewController.swift */,
-				C8C3FCD61F6DD5A700FF5FF3 /* QuizViewController.swift */,
+				C856AFCA1F6E8751005C7A9B /* SurveyContainer */,
+				C8A5111A1F6E261800767019 /* TasksContainer */,
 				C8C3FCD81F6DE16D00FF5FF3 /* QuizContainer */,
-				C81ED2081E65ECEE0097826F /* BaseController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -409,6 +426,7 @@
 			files = (
 				C80042BD1E6A4C1D005D3514 /* BaseTabBarController.swift in Sources */,
 				C8C3FCDA1F6DE1F900FF5FF3 /* BaseQuizController.swift in Sources */,
+				C856AFCE1F6E87AE005C7A9B /* SurveyViewController.swift in Sources */,
 				C8C3FCD71F6DD5A700FF5FF3 /* QuizViewController.swift in Sources */,
 				C80042C91E6C2489005D3514 /* NotificationAngel.swift in Sources */,
 				C8EC0A0A1F6D2F6C00D9C01B /* UIImageExtension.swift in Sources */,
@@ -420,6 +438,7 @@
 				C857A3941E3B863100B3CCF5 /* UIFontExtension.swift in Sources */,
 				C88CE1401E6809C900C9A0A2 /* ManagedObject.swift in Sources */,
 				C8C3FCD31F6D5F3800FF5FF3 /* EventViewController.swift in Sources */,
+				C856AFD41F6E89B3005C7A9B /* BaseSurveyController.swift in Sources */,
 				C8274F941E6A195A002DCBDD /* AddController.swift in Sources */,
 				C803A6321F6CA3C7008C6788 /* AchievementCollectionViewController.swift in Sources */,
 				C80042D01E6C4AEB005D3514 /* ViewControllerExtension.swift in Sources */,
@@ -436,6 +455,7 @@
 				C80042CE1E6C2994005D3514 /* NSDate.swift in Sources */,
 				C80042BE1E6A4C1D005D3514 /* BaseTableViewController.swift in Sources */,
 				C80042C01E6A4D4A005D3514 /* BaseViewController.swift in Sources */,
+				C856AFD21F6E88A1005C7A9B /* AllSurveyControllers.swift in Sources */,
 				C857A39A1E3BFCCD00B3CCF5 /* CoreData.xcdatamodeld in Sources */,
 				C8274F901E69D92D002DCBDD /* Key+CoreDataClass.swift in Sources */,
 			);

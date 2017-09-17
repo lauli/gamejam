@@ -25,6 +25,9 @@ class BaseQuizController: UIViewController{
     }
     
     @IBAction func clickedButtonA(_ sender: Any) {
+        if checkIfAlreadyAnswered() {
+            return
+        }
         
         if self.correctAnswer == "A" {
             self.buttonA.layer.backgroundColor = UIColor.green.cgColor
@@ -37,6 +40,10 @@ class BaseQuizController: UIViewController{
     }
     
     @IBAction func clickedButtonB(_ sender: Any) {
+        if checkIfAlreadyAnswered() {
+            return
+        }
+        
         if self.correctAnswer == "B" {
             self.buttonB.layer.backgroundColor = UIColor.green.cgColor
             self.saveAnswer(withIdentifier: 1)
@@ -48,6 +55,10 @@ class BaseQuizController: UIViewController{
     }
     
     @IBAction func clickedButtonC(_ sender: Any) {
+        if checkIfAlreadyAnswered() {
+            return
+        }
+        
         if self.correctAnswer == "C" {
             self.buttonC.layer.backgroundColor = UIColor.green.cgColor
             self.saveAnswer(withIdentifier: 1)
@@ -59,6 +70,10 @@ class BaseQuizController: UIViewController{
     }
     
     @IBAction func clickedButtonD(_ sender: Any) {
+        if checkIfAlreadyAnswered() {
+            return
+        }
+        
         if self.correctAnswer == "D" {
             self.buttonD.layer.backgroundColor = UIColor.green.cgColor
             self.saveAnswer(withIdentifier: 1)
@@ -125,12 +140,12 @@ extension BaseQuizController {
         }
     }
     
-    func checkIfAlreadyAnswered()/* -> Bool */{
+    func checkIfAlreadyAnswered() -> Bool {
         if self.userDefault.value(forKey: "quiz-points-for-\(self.currentQuestion)") == nil {
-            //return false
+            return false
         } else {
             self.alreadyAnswered()
-            //return true
+            return true
         }
     }
     
@@ -143,6 +158,11 @@ extension BaseQuizController {
         // 0 -> wrong
         // 1 -> right
         self.userDefault.set(identifier, forKey: "quiz-points-for-\(self.currentQuestion)")
+        
+        if identifier == 1, let highscore = self.userDefault.value(forKey: "highscore") as? Int {
+            self.userDefault.set((highscore + 10), forKey: "highscore")
+            print("updated highscore for quiz = \((highscore+10))")
+        }
     }
     
     func disableButtons() {

@@ -42,6 +42,14 @@ class ProfileController: BaseTableViewController, NSFetchedResultsControllerDele
         self.profileHighscore.textColor = UIColor.keymateOrange
         self.blurEffect(for: self.profileBackground)
         self.changeToCircle(view: self.profilePicture)
+        
+        self.updateHighscore()
+    }
+    
+    private func updateHighscore() {
+        if let highscore = UserDefaults.standard.value(forKey: "highscore") {
+            self.profileHighscore.text = String(describing: highscore)
+        }
     }
     
     private func changeToCircle(view: UIImageView) {

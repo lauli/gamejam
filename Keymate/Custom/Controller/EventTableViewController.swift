@@ -36,26 +36,50 @@ class EventTableViewController: BaseTableViewController {
         }
     }
     
+    override func setHeader() {
+        self.navigationItem.title = "080496"
+    }
+    
 }
 
 extension EventTableViewController {
     func quizIsFinished() -> Bool {
         var correctAnswers = 0
+        var allFinished   = true
         for index in 1..<11 {
             if self.userDefault.value(forKey: "quiz-points-for-\(index)") == nil {
-                return false
+                allFinished = false
             }
             else if self.userDefault.value(forKey: "quiz-points-for-\(index)") as! Int == 1 {
                 correctAnswers += 1
             }
         }
-        self.imageQuiz.image = UIImage(named: "like")
-        self.resultQuiz.text = "\(correctAnswers)/10 correct"
-        return true
+        
+        if allFinished {
+            self.imageQuiz.image = UIImage(named: "like")
+            self.resultQuiz.text = "\(correctAnswers)/10 correct"
+        }
+        else {
+            self.resultQuiz.text = "\(correctAnswers)/10 finished"
+        }
+        return allFinished
     }
     
     func taskIsFinished() -> Bool {
-        return false
+        var finishedTasks = 0
+        var allFinished   = true
+        for index in 1..<5 {
+            if self.userDefault.value(forKey: "task-points-for-\(index)") == nil {
+                self.resultTasks.text = "\(finishedTasks)/4 finished"
+                allFinished = false
+            }
+            else if self.userDefault.value(forKey: "task-points-for-\(index)") as! Int == 1 {
+                finishedTasks += 1
+            }
+        }
+        self.imageTask.image = UIImage(named: "like")
+        self.resultTasks.text = "\(finishedTasks)/4 finished"
+        return allFinished
     }
     
     func gameIsFinished() -> Bool {
@@ -63,6 +87,12 @@ extension EventTableViewController {
     }
     
     func surveyIsFinished() -> Bool {
-        return false
+        for index in 1..<4 {
+            if self.userDefault.value(forKey: "survey-points-for-\(index)") == nil {
+                return false
+            }
+        }
+        self.imageSurvey.image = UIImage(named: "like")
+        return true
     }
 }

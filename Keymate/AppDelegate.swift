@@ -19,11 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UIApplication.shared.applicationIconBadgeNumber = 0
-        let ok = UNNotificationAction(identifier: "OK", title: "OK", options: [])
-        let category = UNNotificationCategory(identifier: "message", actions: [ok], intentIdentifiers: [], options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([category])
-        UNUserNotificationCenter.current().delegate = NotificationDevil.shared
+        // 58922
+        UserDefaults.standard.register(defaults: ["highscore" : 58992])
         return true
     }
 
