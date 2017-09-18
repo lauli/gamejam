@@ -12,10 +12,6 @@ import CoreData
 
 class ProfileController: BaseTableViewController, NSFetchedResultsControllerDelegate {
 
-    let cdManager: CoreDataManager = CoreDataManager.sharedInstance
-    var keys: [Key] = []
-    var sorted: [Key] = []
-    
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var profileBackground: UIImageView!
     @IBOutlet weak var profileBackgroundLayer: UIView!

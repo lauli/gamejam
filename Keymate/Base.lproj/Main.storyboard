@@ -327,7 +327,7 @@
             <objects>
                 <navigationController id="gAv-Ng-9SG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Highscore" image="star" selectedImage="star" id="O8f-6m-eQE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hKx-g2-NCP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hKx-g2-NCP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -344,7 +344,7 @@
             <objects>
                 <navigationController id="9hd-bY-7Nc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Event" image="tickets" selectedImage="tickets" id="Hz3-a2-TrQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hRU-sN-3va">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hRU-sN-3va">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -361,7 +361,7 @@
             <objects>
                 <navigationController id="Tih-IX-cT1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="user" selectedImage="user" id="7jQ-8d-InR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pfX-mU-o0E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pfX-mU-o0E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -671,7 +671,7 @@
                                                     <color key="textColor" red="0.94494295120000005" green="0.61238664389999997" blue="0.24310453239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2QS-4U-fyU">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2QS-4U-fyU">
                                                     <rect key="frame" x="8" y="10" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="JgO-Fx-aIM"/>
@@ -719,7 +719,7 @@
                                                     <color key="textColor" red="0.94494295120000005" green="0.61238664389999997" blue="0.24310453239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efk-FJ-P0h">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efk-FJ-P0h">
                                                     <rect key="frame" x="8" y="10" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="bLD-s4-P1c"/>
@@ -767,7 +767,7 @@
                                                     <color key="textColor" red="0.94494295120000005" green="0.61238664389999997" blue="0.24310453239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-p6-S1G">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LWP-p6-S1G">
                                                     <rect key="frame" x="8" y="10" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="SDu-Pz-nVE"/>
@@ -815,7 +815,7 @@
                                                     <color key="textColor" red="0.94494295120000005" green="0.61238664389999997" blue="0.24310453239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-gZ-oml">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-gZ-oml">
                                                     <rect key="frame" x="8" y="10" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="VXo-Ft-Yyg"/>
@@ -2735,7 +2735,7 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TkD-oJ-uBq"/>
                                     <barButtonItem style="plain" id="lMN-oq-UW2">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="djo-gb-jQa" userLabel="segmentcontroller" customClass="Qui">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="djo-gb-jQa" userLabel="segmentcontroller">
                                             <rect key="frame" x="16" y="7" width="343" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
